@@ -107,7 +107,7 @@ cholera-kenya/
 
 ## 8. How to reproduce
 
-1. Open `cholera-kenya-analysis.xlsx`.
+1. Open `ee-chart.csv`.
 2. The `Rain` sheet holds the joined data: year, rainfall, cases, a cleaned cases column, the epidemic-year flag, the summary table and the period table.
 3. Key formulas: `QUARTILE(cases,3)` for the threshold, `SUMIFS` and `COUNTIFS` for the period table, `CORREL` for the rainfall check, and `SUM(LARGE(cases,{1,2,3,4,5}))/total` for the concentration share.
 
