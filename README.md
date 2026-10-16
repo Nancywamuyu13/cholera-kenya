@@ -19,7 +19,7 @@ A descriptive analysis of reported cholera cases in Kenya, built in Excel from p
 
 | Data | Source | Coverage | Notes |
 |---|---|---|---|
-| Reported cholera cases, by country and year | Our World in Data (based on WHO data) | Kenya, 1971-2024 | File: `number-reported-cases-of-cholera.csv`. Accessed [date]. |
+| Reported cholera cases, by country and year | Our World in Data (based on WHO data) | Kenya, 1971-2024 | File: `number-reported-cases-of-cholera.csv`. Accessed 2026. |
 | Mean annual rainfall for Kenya (mm) | Earth Engine export of a gridded rainfall product | 1981-2024 | File: `ee-chart.csv`. |
 
 **Analysis period:** 1981-2024, the years covered by both datasets. That is 44 years, of which 37 have a case report.
