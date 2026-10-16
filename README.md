@@ -19,8 +19,8 @@ A descriptive analysis of reported cholera cases in Kenya, built in Excel from p
 
 | Data | Source | Coverage | Notes |
 |---|---|---|---|
-| Reported cholera cases, by country and year | Our World in Data (based on WHO data) | Kenya, 1971-2024 | File: `number-reported-cases-of-cholera.csv`. Accessed 2026. |
-| Mean annual rainfall for Kenya (mm) | Earth Engine export of a gridded rainfall product | 1981-2024 | File: `ee-chart.csv`. |
+| Reported cholera cases, by country and year | Our World in Data (based on WHO data) | Kenya, 1971-2024 | File: `number-reported-cases-of-cholera.xlsx`. Accessed October 2026. |
+| Mean annual rainfall for Kenya (mm) | Gridded rainfall data exported from Google Earth Engine | 1981-2024 | File: `ee-chart.xlsx`. |
 
 **Analysis period:** 1981-2024, the years covered by both datasets. That is 44 years, of which 37 have a case report.
 
@@ -57,7 +57,7 @@ Nine years exceeded the 4,288-case threshold: **1997, 1998, 1999, 2009, 2015, 20
 
 ![Reported cholera cases in Kenya](Cholera%20cases%20Chart.png)
 
-*Gaps are years with no report. Orange/blue coloring in the chart follows the epidemic-year rule above.*
+*Blue bars are epidemic years (above 4,288 cases) and orange bars are other reported years. Gaps are years with no report.*
 
 ### 4.3 Change by period
 
@@ -98,20 +98,19 @@ Annual mean rainfall was weakly correlated with reported cases (r = 0.27, n = 37
 ```
 cholera-kenya/
 ├── README.md
-├── number-reported-cases-of-cholera.csv   (cases data)
-├── ee-chart.csv                           (rainfall data)
-├── cholera-kenya-analysis.xlsx            (the analysis workbook)
+├── ee-chart.xlsx                          (rainfall data and the full analysis, sheet "Rain")
+├── number-reported-cases-of-cholera.xlsx  (cases data, sheets "Kenya" and "Clean")
 ├── Cholera cases Chart.png                (trend chart)
 └── Kenya cholera cases by period.png      (period chart)
 ```
 
 ## 8. How to reproduce
 
-1. Open `ee-chart.csv`.
+1. Open `ee-chart.xlsx`.
 2. The `Rain` sheet holds the joined data: year, rainfall, cases, a cleaned cases column, the epidemic-year flag, the summary table and the period table.
 3. Key formulas: `QUARTILE(cases,3)` for the threshold, `SUMIFS` and `COUNTIFS` for the period table, `CORREL` for the rainfall check, and `SUM(LARGE(cases,{1,2,3,4,5}))/total` for the concentration share.
 
 ## 9. Sources
 
-- Our World in Data, reported cholera cases (based on WHO data): [add the page link and date accessed]
-- Rainfall data: [add the dataset name, link and date accessed]
+- Our World in Data, reported cholera cases (based on WHO data): https://ourworldindata.org/grapher/number-reported-cases-of-cholera (accessed October 2026)
+- Rainfall data: mean annual rainfall (mm) for Kenya, 1981-2024, exported from Google Earth Engine (file `ee-chart.xlsx`). The specific gridded dataset and the method used to average it over Kenya are not documented in this version of the README.
