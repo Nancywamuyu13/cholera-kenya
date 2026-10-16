@@ -2,8 +2,8 @@
 
 A descriptive analysis of reported cholera cases in Kenya, built in Excel from publicly available data. The project looks at how the disease burden is distributed across years, which years were epidemic years, how the burden changed by period, and whether annual rainfall explains the year-to-year pattern.
 
-**Author:** [Your name]
-**Date:** [Month Year]
+**Author:** Nancy Wambura Wamuyu
+**Date:** 16/10/2026
 **Tools:** Excel/WPS Spreadsheet (formulas and charts)
 
 ---
@@ -20,7 +20,7 @@ A descriptive analysis of reported cholera cases in Kenya, built in Excel from p
 | Data | Source | Coverage | Notes |
 |---|---|---|---|
 | Reported cholera cases, by country and year | Our World in Data (based on WHO data) | Kenya, 1971-2024 | File: `number-reported-cases-of-cholera.csv`. Accessed [date]. |
-| Mean annual rainfall for Kenya (mm) | [FILL IN: dataset name and how it was produced, e.g. Earth Engine export of a gridded rainfall product] | 1981-2024 | File: `ee-chart.csv`. |
+| Mean annual rainfall for Kenya (mm) | Earth Engine export of a gridded rainfall product | 1981-2024 | File: `ee-chart.csv`. |
 
 **Analysis period:** 1981-2024, the years covered by both datasets. That is 44 years, of which 37 have a case report.
 
